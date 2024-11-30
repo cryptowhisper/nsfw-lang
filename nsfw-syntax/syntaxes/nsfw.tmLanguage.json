@@ -1,0 +1,61 @@
+{
+    "scopeName": "source.nsfw",
+    "patterns": [{ "include": "#expression" }],
+    "repository": {
+        "expression": {
+            "patterns": [
+                {
+                    "name": "keyword.control.nsfw",
+                    "match": "\\b(ass|bitch|hell)\\b"
+                },
+                {
+                    "name": "support.function.nsfw",
+                    "match": "\\b(shit|damn|dick)\\b"
+                },
+                {
+                    "name": "storage.type.nsfw",
+                    "match": "\\b(fuck|cunt|balls|pussy)\\b"
+                },
+                {
+                    "name": "string.quoted.double.nsfw",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.nsfw",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.nsfw",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.nsfw",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "constant.numeric.nsfw",
+                    "match": "\\b[0-9]+\\b"
+                },
+                {
+                    "name": "comment.line.double-slash.nsfw",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.nsfw",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                },
+                {
+                    "name": "keyword.operator.nsfw",
+                    "match": "\\+|\\-|\\*|\\/|\\=|\\<|\\>"
+                }
+            ]
+        }
+    }
+}

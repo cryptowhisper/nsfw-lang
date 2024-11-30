@@ -1,0 +1,22 @@
+{
+    "name": "nsfw-language",
+    "displayName": "NSFW Language",
+    "description": "Syntax highlighting for NSFW programming language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "nsfw",
+            "aliases": ["NSFW", "nsfw"],
+            "extensions": [".nsfw"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "nsfw",
+            "scopeName": "source.nsfw",
+            "path": "./syntaxes/nsfw.tmLanguage.json"
+        }]
+    }
+}
